@@ -36,9 +36,10 @@ spec:
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "$(MYSQL_ROOT_PW)"
-        command: ["echo"]
-        args: ["$(MYSQL_ROOT_PW)"]
+          valueFrom:
+            secretKeyRef:
+              name: mysql-root-pw
+              key: mysql-root-password
         ports:
         - containerPort: 3306
           name: mysql
