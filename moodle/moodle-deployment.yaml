@@ -49,13 +49,13 @@ spec:
         - name: DB_ENV_MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: moodle-db-uname
-              key: moodle-db-username
+              name: moodle-db-pw
+              key: moodle-db-password
         - name: DB_ENV_MYSQL_USER
           valueFrom:
             secretKeyRef:
-              name: moodle-db-pw
-              key: moodle-db-password
+              name: moodle-db-uname
+              key: moodle-db-username
         - name: DB_ENV_MYSQL_DATABASE
           valueFrom:
             secretKeyRef:
