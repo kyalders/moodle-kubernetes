@@ -36,7 +36,7 @@ spec:
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: $MYSQL_ROOT_PW
+          value: "$(MYSQL_ROOT_PW)"
         ports:
         - containerPort: 3306
           name: mysql
