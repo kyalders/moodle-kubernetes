@@ -31,11 +31,11 @@ This repo serves as a place to walk through a Moodle deployment using ArgoCD on 
 ## Moodle Setup
 1. Connect your Moodle Repo to ArgoCD.
 2. Create kubernetes secrets.
-   ` kubectl create secret generic mysql-root-pw --from-literal=mysql-root-password=<yourmysqlrootpassword> --namespace=moodle
-kubectl create secret generic moodle-db-server --from-literal=moodle-db-host=<your moodle cluster dns name. ex: moodle-mysql.moodle.svc.cluster.local> --namespace=moodle
-kubectl create secret generic moodle-db-uname --from-literal=moodle-db-username=<yourusername> --namespace=moodle
-kubectl create secret generic moodle-db-pw --from-literal=moodle-db-password=<yourmoodlepassword> --namespace=moodle
-kubectl create secret generic moodle-db --from-literal=moodle-db-name=<moodledatabasename> --namespace=moodle`
+- ` kubectl create secret generic mysql-root-pw --from-literal=mysql-root-password=<yourmysqlrootpassword> --namespace=moodle`
+- `kubectl create secret generic moodle-db-server --from-literal=moodle-db-host=<your moodle cluster dns name. ex: moodle-mysql.moodle.svc.cluster.local> --namespace=moodle`
+- `kubectl create secret generic moodle-db-uname --from-literal=moodle-db-username=<yourusername> --namespace=moodle`
+- `kubectl create secret generic moodle-db-pw --from-literal=moodle-db-password=<yourmoodlepassword> --namespace=moodle`
+- `kubectl create secret generic moodle-db --from-literal=moodle-db-name=<moodledatabasename> --namespace=moodle`
 3. Create your application in ArgoCD.
 4. Connect to database using dbeaver.
 5. Create moodle database and moodledbuser.
